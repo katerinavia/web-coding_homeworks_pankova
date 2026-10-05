@@ -4,6 +4,8 @@
 
 Ссылка на верстку: https://github.com/katerinavia/web-coding_homeworks_pankova/pull/1
 
+Открыть ссылку на сайт можно скачав и открыв index.html на компьютере. На данном этапе не реализованы всплывающие окна, так как они предполагают использование Java Script, и будут добавлены позже.
+
 - index.html — экран матчи
 - pages/matches.html — экран выбор сектора
 - pages/match.html — экран выбранное место
