@@ -1,0 +1,2 @@
+import React from 'react';
+export default function Modal({title, children, onClose, className=''}) { return <div className="modal-backdrop" onMouseDown={e=>{if(e.target===e.currentTarget) onClose();}}><section className={`modal ${className}`} role="dialog" aria-modal="true" aria-label={title}><button className="modal-close" onClick={onClose} aria-label="Закрыть">×</button><h2>{title}</h2>{children}</section></div>; }

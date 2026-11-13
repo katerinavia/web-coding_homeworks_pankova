@@ -1,0 +1,6 @@
+import React from 'react';
+import { getTeam } from '../data/data.js';
+export default function MatchCard({match,onNotify,onBuy}) {
+ const home=getTeam(match.homeId), away=getTeam(match.awayId);
+ return <article className="match-card"><div className="team-block"><img className="team-logo" src={`/assets/images/${home.image}`} alt={`Логотип: ${home.name}`}/><div className="team-name">{home.name}</div><div className="team-city">{home.city}</div></div><div className="match-summary"><div className="match-time">{match.time}</div><div className="match-date">{match.date}</div><div className="match-city">{match.venue}</div></div><div className="team-block"><img className="team-logo" src={`/assets/images/${away.image}`} alt={`Логотип: ${away.name}`}/><div className="team-name">{away.name}</div><div className="team-city">{away.city}</div></div><div className="match-card__action">{match.purchasable?<button className="action-button action-button--success" onClick={()=>onBuy(match)}>купить билет</button>:<span className={`action-button ${match.status==='продано'?'action-button--danger':'action-button--muted'}`}>{match.status}</span>}<button className="secondary-button notification-button" onClick={()=>onNotify(match)}>♧ Уведомить</button></div></article>;
+}
