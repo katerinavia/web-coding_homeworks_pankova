@@ -1,0 +1,2 @@
+.app { min-height: 100vh; }
+.app :global(.notification-status) { margin-top: 10px; color: #68738a; font-size: 12px; }
